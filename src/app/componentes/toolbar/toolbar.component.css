@@ -1,0 +1,30 @@
+.bg-blue{
+  background-color: #274690;
+    color: #ffffff;
+}
+
+.icon {
+  height: 50px;
+  width: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#img{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.personalizado {
+  margin-right: 30px;
+  margin-left: 160px;
+  margin-top: 10px;
+}

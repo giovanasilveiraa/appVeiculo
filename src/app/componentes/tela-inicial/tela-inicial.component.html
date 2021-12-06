@@ -1,0 +1,23 @@
+<div class="container p-0">
+  <img src="assets/carros/hilux/hilux1.jpg" class="img-fluid rounded my-3">
+</div>
+<div class="container p-0">
+  <div class="card mb-3" style="max-width: 540px;" *ngFor="let f of carros">
+    <div class="row g-0">
+      <div class="col-4 my-6">
+        <img [src]="f.foto" class="img-thumbnail rounded mt-3">
+      </div>
+      <div class="col-8">
+        <div class="card-body">
+          <h3 class="card-title">
+          {{ f.nome }}
+          <span id="button" class="btn btn-outline-danger btn-sm mt-20">{{ f.button }}</span>
+         </h3>
+          <div>
+          </div>
+          <p class="card-text"><small class="text-muted">{{ f.valor }}</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

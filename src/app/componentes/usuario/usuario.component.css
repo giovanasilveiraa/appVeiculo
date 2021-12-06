@@ -1,0 +1,27 @@
+.img {
+  border-radius: 50%;
+}
+
+.personalizado {
+  margin-right: 30px;
+  margin-left: 139px;
+  margin-top: 10px;
+}
+
+.p {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.paragrafo {
+  margin-left: 17px;
+}
+
+.label {
+  margin-left: 17px;
+}
+
+.label-email {
+  margin-left: 17px;
+  margin-top: 30px;
+}
