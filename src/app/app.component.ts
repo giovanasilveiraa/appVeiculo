@@ -9,7 +9,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 export class AppComponent {
   @ViewChild('sidenav') sidenav: MatSidenav;
 
-  title = 'Projeto PAMI';
+  title = 'Projeto Veículo';
 
   close() {
     this.sidenav.close();

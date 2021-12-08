@@ -14,7 +14,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
-import { PersonagensComponent } from './componentes/personagens/personagens.component';
+import { FavoritoComponent } from './componentes/favorito/favorito.component';
 import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
@@ -25,7 +25,7 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PersonagensComponent,
+    FavoritoComponent,
     CarrinhoComponent,
     FooterComponent,
     ToolbarComponent,

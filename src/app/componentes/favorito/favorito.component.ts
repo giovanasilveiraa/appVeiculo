@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-personagens',
-  templateUrl: './personagens.component.html',
-  styleUrls: ['./personagens.component.css']
+  selector: 'app-favorito',
+  templateUrl: './favorito.component.html',
+  styleUrls: ['./favorito.component.css']
 })
-export class PersonagensComponent implements OnInit {
+export class FavoritoComponent implements OnInit {
 
-  personagens = [
+  favoritos = [
     {
       nome:         'Nome do Produto',
       foto:         'assets/carros/hilux/hilux1.jpg'
