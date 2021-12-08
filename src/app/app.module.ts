@@ -15,7 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 
 import { PersonagensComponent } from './componentes/personagens/personagens.component';
-import { EpisodiosComponent } from './componentes/episodios/episodios.component';
+import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { TelaInicialComponent } from './componentes/tela-inicial/tela-inicial.component';
@@ -26,7 +26,7 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
   declarations: [
     AppComponent,
     PersonagensComponent,
-    EpisodiosComponent,
+    CarrinhoComponent,
     FooterComponent,
     ToolbarComponent,
     TelaInicialComponent,
