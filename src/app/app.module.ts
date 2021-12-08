@@ -21,6 +21,7 @@ import { ToolbarComponent } from './componentes/toolbar/toolbar.component';
 import { TelaInicialComponent } from './componentes/tela-inicial/tela-inicial.component';
 import {MatBadgeModule} from '@angular/material/badge';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
     ToolbarComponent,
     TelaInicialComponent,
     UsuarioComponent,
+    LoginComponent,
 
 
   ],

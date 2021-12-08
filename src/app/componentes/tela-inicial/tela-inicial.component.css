@@ -15,3 +15,13 @@
   margin-top: 15px;
   margin-left: 8px;
 }
+
+.img-carrossel {
+  width: 450px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.container {
+  margin-top: 15px;
+}
