@@ -7,12 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonagensComponent implements OnInit {
 
-  personagem = [
+  personagens = [
     {
       nome:         'Nome do Produto',
-      foto:         'assets/carros/hilux/hilux1.jpg',
-      button:       'VER'
-
+      foto:         'assets/carros/hilux/hilux1.jpg'
     },
     {
       nome:         'Nome do Produto',
