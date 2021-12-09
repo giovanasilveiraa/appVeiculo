@@ -6,14 +6,17 @@ import { LoginComponent } from './componentes/login/login.component';
 import { ProdutoComponent } from './componentes/produto/produto.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CompraFinalizadaComponent } from './componentes/compra-finalizada/compra-finalizada.component';
 
 const routes: Routes = [
-  { path: '', component: TelaInicialComponent },
+  { path: '', component: LoginComponent },
+  { path: 'home', component: TelaInicialComponent },
   { path: 'carrinho', component: CarrinhoComponent},
   { path:  'favorito', component: FavoritoComponent},
   { path:  'usuario', component: UsuarioComponent},
   { path:  'login', component: LoginComponent},
-  { path:  'produto', component: ProdutoComponent}
+  { path:  'produto', component: ProdutoComponent},
+  { path:  'compra_finalizada', component: CompraFinalizadaComponent}
 ];
 
 @NgModule({

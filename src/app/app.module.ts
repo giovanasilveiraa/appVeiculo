@@ -14,6 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import  {  SweetAlert2Module  } from '@sweetalert2/ngx-sweetalert2' ;
 
 import { FavoritoComponent } from './componentes/favorito/favorito.component';
 import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
@@ -53,7 +54,8 @@ import { CompraFinalizadaComponent } from './componentes/compra-finalizada/compr
     MatSidenavModule,
     MatListModule,
     MatBadgeModule,
-    RouterModule
+    RouterModule,
+    SweetAlert2Module
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -14,3 +14,11 @@
   margin-top: 15px;
   margin-left: 8px;
 }
+
+#btn2 {
+  background-color: #B80C09;
+  border-radius: 2px;
+  color: #FFFFFF;
+  width: 149px;
+  height: 30px;
+}
