@@ -23,29 +23,50 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  const inputOptions = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        'Boleto': 'Boleto',
-        'Catão de crédito': 'Cartão de crédito',
-        'Cartão de débito': 'Cartão de débito'
-      })
-    }, 1000)
-  })
-
-  const { value: color } = await Swal.fire({
-    title: 'Select a forma de pagamento',
-    input: 'radio',
-    inputOptions: inputOptions,
-    inputValidator: (value) => {
-      if (!value) {
-        return 'You need to choose something!'
+  confirmBox(){
+    Swal.fire({
+      title: 'Forma de pagamento',
+      text: 'Escolha como deseja pagar',
+      icon: 'question',
+      showCancelButton: true,
+      showDenyButton: true,
+      confirmButtonText: 'Boleto',
+      denyButtonText: 'Cartão de crédito',
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire(
+          'Confirmado!',
+          'forma de pagamento selecionada.',
+          'success'
+        )
+      } else if (result.dismiss === Swal.DismissReason.cancel) {
+        Swal.fire(
+          'Cancelled',
+          'Your imaginary file is safe :)',
+          'error'
+        )
       }
-    }
-  })
+    })
+  }
 
-  if (color) {
-    Swal.fire({ html: `You selected: ${color}` })
+  ConfirmButton() {
+    Swal.fire({
+      title: 'Confirmar compra',
+      text: "Suas compras estão prontas para serem confirmadas!",
+      icon: 'info',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Confirmada!',
+          'Parabéns sua compra foi efetuada com sucesso.',
+          'success'
+        )
+      }
+    })
   }
 
 }

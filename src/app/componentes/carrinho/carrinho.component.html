@@ -48,10 +48,10 @@
     <p class="negrito">Endereço</p>
   </div>
   <div>
-    <button type="button" class="btn btn-primary" (click)="confirmBox()">Forma de pagamento</button>
+    <button type="button" id="btn" class="btn btn-primary" (click)="confirmBox()">Forma de pagamento</button>
   </div>
   <div class="d-grid gap-2 d-md-end my-5">
-    <button class="btn btn-danger" type="button" routerLink="/compra_finalizada">Finalizar compra</button>
+    <button class="btn btn-danger" type="button" routerLink="/compra_finalizada" (click)="ConfirmButton()">Finalizar compra</button>
     <button class="btn btn-outline-danger" type="button" routerLink="/home">Continuar comprando</button>
   </div>
     </div>
