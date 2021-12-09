@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CarrinhoComponent implements OnInit {
 
+  carros = [
+
+    {
+      nome:       'Nome do produto',
+      foto:       'assets/carros/hilux/hilux1.jpg',
+      valor:      'R$ 00,00',
+      button:     'Remover'
+    }
+  ]
+
   constructor() { }
 
   ngOnInit(): void {
