@@ -11,10 +11,10 @@ export class CarrinhoComponent implements OnInit {
   carros = [
 
     {
-      nome:       'Nome do produto',
-      foto:       'assets/carros/hilux/hilux1.jpg',
-      valor:      'R$ 00,00',
-      button:     'Remover'
+      nome: 'Nome do produto',
+      foto: 'assets/carros/hilux/hilux1.jpg',
+      valor: 'R$ 00,00',
+      button: 'Remover'
     }
   ]
 
@@ -23,29 +23,36 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  confirmBox(){
-    Swal.fire({
-      title: 'Are you sure want to remove?',
-      text: 'You will not be able to recover this file!',
-      icon: 'warning',
+  async formaPagamento() {
+
+    const { value: fruit } = await Swal.fire({
+      title: 'Select field validation',
+      input: 'select',
+      inputOptions: {
+        'Fruits': {
+          apples: 'Apples',
+          bananas: 'Bananas',
+          grapes: 'Grapes',
+          oranges: 'Oranges'
+        },
+        'Vegetables': {
+          potato: 'Potato',
+          broccoli: 'Broccoli',
+          carrot: 'Carrot'
+        },
+        'icecream': 'Ice cream'
+      },
+      inputPlaceholder: 'Select a fruit',
       showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, keep it'
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire(
-          'Deleted!',
-          'Your imaginary file has been deleted.',
-          'success'
-        )
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire(
-          'Cancelled',
-          'Your imaginary file is safe :)',
-          'error'
-        )
+      inputValidator: (value) => {
+        return new Promise(void function (resolve) {
+          if (value === 'oranges') {
+            resolve();
+          } else {
+            resolve('You need to select oranges :)');
+          }
+        })
       }
     })
   }
-
 }
