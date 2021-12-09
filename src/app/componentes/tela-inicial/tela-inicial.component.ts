@@ -9,35 +9,35 @@ export class TelaInicialComponent implements OnInit {
 
   carros = [
     {
-      nome:      'Nome do produto',
-      foto:      'assets/carros/hilux/hilux 1.jpg',
-      valor:     'R$ 00,00',
+      nome:      'Hilux',
+      foto:      'assets/carros/hilux/hilux1.jpg',
+      valor:     'R$ 310.000,00',
       button:    'VER'
 
     },
     {
-     nome:       'Nome do produto',
+     nome:       'Kadett',
      foto:       'assets/carros/kadett/kadett1.jpg',
-     valor:      'R$ 00,00',
+     valor:      'R$ 23.000,00',
      button:     'VER'
     },
     {
-      nome:       'Nome do produto',
+      nome:       'Mercedes sedan',
       foto:       'assets/carros/mercedes_sedan/merecedes1.jpeg',
-      valor:      'R$ 00,00',
+      valor:      'R$ 286.900,00',
       button:     'VER'
 
     },
     {
-      nome:       'Nome do produto',
+      nome:       'Nivus',
       foto:       'assets/carros/nivus/nivus1.png',
-      valor:      'R$ 00,00',
+      valor:      'R$ 105.250,00',
       button:     'VER'
     },
     {
-      nome:       'Nome do produto',
+      nome:       'Corolla',
       foto:       'assets/carros/corolla/corola1.png',
-      valor:      'R$ 00,00',
+      valor:      'R$ 175.000,00',
       button:     'VER'
     },
   ]

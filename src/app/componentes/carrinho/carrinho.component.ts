@@ -11,9 +11,9 @@ export class CarrinhoComponent implements OnInit {
   carros = [
 
     {
-      nome: 'Nome do produto',
+      nome: 'Hilux',
       foto: 'assets/carros/hilux/hilux1.jpg',
-      valor: 'R$ 00,00',
+      valor: 'R$ 310.000,00',
       button: 'Remover'
     }
   ]
