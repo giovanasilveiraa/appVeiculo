@@ -34,11 +34,12 @@
         <div class="card-body">
           <h3 class="card-title">
           {{ f.nome }}
-          <span id="button" class="btn btn-outline-danger btn-sm mt-20">{{ f.button }}</span>
          </h3>
-          <div>
+         <div class="container">
+          <div class="row">
+            <div class="col-sm-5 col-md-6"><p class="card-text"><small class="text-muted">{{ f.valor }}</small></p></div>
+            <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0"><span id="button" class="btn btn-outline-danger btn-sm">{{ f.button }}</span></div>
           </div>
-          <p class="card-text"><small class="text-muted">{{ f.valor }}</small></p>
         </div>
       </div>
     </div>
