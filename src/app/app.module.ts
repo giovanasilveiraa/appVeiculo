@@ -24,6 +24,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ProdutoComponent } from './componentes/produto/produto.component';
+import { CompraFinalizadaComponent } from './componentes/compra-finalizada/compra-finalizada.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProdutoComponent } from './componentes/produto/produto.component';
     UsuarioComponent,
     LoginComponent,
     ProdutoComponent,
+    CompraFinalizadaComponent,
 
 
   ],
