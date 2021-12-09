@@ -3,8 +3,7 @@
 }
 
 #button{
-  margin-left: 185px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #B80C09;
 }
 .img {
@@ -14,7 +13,4 @@
   border-radius: 8px;
   margin-top: 15px;
   margin-left: 8px;
-}
-
-#card {
 }
