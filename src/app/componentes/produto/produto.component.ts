@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./produto.component.css']
 })
 export class ProdutoComponent implements OnInit {
+  star: any[] = ['', '', '', '', ''] 
 
   constructor() { }
 
