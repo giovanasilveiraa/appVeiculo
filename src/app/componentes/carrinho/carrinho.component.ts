@@ -38,11 +38,23 @@ export class CarrinhoComponent implements OnInit {
       inputPlaceholder: 'Selecione a forma de pagamento',
       showCancelButton: true,
       inputValidator: (value) => {
-        return new Promise(void function (resolve) {
-          if (value === 'Boleto') {
-            resolve();
-          } else {
-            resolve('Forma de pagamento selecionada :)');
+        return new Promise((resolve) => {
+          switch (value) {
+            case 'boleto':
+              resolve('');
+              Swal.fire(`Você selecionou: Boleto`)
+
+            case 'CartaoC':
+              resolve('');
+              Swal.fire(`Você selecionou: Cartão de crédito`)
+
+
+            case 'CartaoD':
+              resolve('');
+              Swal.fire(`Você selecionou: Cartão de débito`)
+
+            default:
+              resolve('Selecione uma forma de pagamento');
           }
         })
       }
