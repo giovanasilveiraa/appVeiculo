@@ -41,20 +41,19 @@ export class CarrinhoComponent implements OnInit {
         return new Promise((resolve) => {
           switch (value) {
             case 'boleto':
-              resolve('');
               Swal.fire(`Você selecionou: Boleto`)
+              break;
 
             case 'CartaoC':
-              resolve('');
               Swal.fire(`Você selecionou: Cartão de crédito`)
-
+              break;
 
             case 'CartaoD':
-              resolve('');
               Swal.fire(`Você selecionou: Cartão de débito`)
+              break;
 
             default:
-              resolve('Selecione uma forma de pagamento');
+              resolve('Selecione uma forma de pagamento')
           }
         })
       }
