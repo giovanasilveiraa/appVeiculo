@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 // COMPONENTES DO MATERIAL DESIGN
 import { MatCardModule } from '@angular/material/card';
@@ -22,6 +23,8 @@ import { TelaInicialComponent } from './componentes/tela-inicial/tela-inicial.co
 import {MatBadgeModule} from '@angular/material/badge';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { ProdutoComponent } from './componentes/produto/produto.component';
+import { CompraFinalizadaComponent } from './componentes/compra-finalizada/compra-finalizada.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { LoginComponent } from './componentes/login/login.component';
     TelaInicialComponent,
     UsuarioComponent,
     LoginComponent,
+    ProdutoComponent,
+    CompraFinalizadaComponent,
 
 
   ],
@@ -47,7 +52,8 @@ import { LoginComponent } from './componentes/login/login.component';
     MatDividerModule,
     MatSidenavModule,
     MatListModule,
-    MatBadgeModule
+    MatBadgeModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

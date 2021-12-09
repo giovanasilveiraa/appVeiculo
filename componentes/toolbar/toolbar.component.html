@@ -1,9 +1,9 @@
 <mat-toolbar class="bg-blue border-bottom border-light">
  <div class="personalizado">
-   <img src="assets/gag.svg" id="img" class="icon" alt="">
+   <img src="assets/logo2.svg" id="img" class="icon" alt="">
  </div>
  <span class="d-flex flex-grow-1 justify-content fw-bold"></span>
- <button mat-icon-button routerLink="/usuario">
+ <button mat-icon-button routerLink="/login" (click)="click()" *ngIf = "pagina !== 'login'">
   <mat-icon>account_circle</mat-icon>
 </button>
 </mat-toolbar>
