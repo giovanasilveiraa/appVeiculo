@@ -10,7 +10,7 @@ export class TelaInicialComponent implements OnInit {
   carros = [
     {
       nome:      'Nome do produto',
-      foto:      'assets/carros/nivus/nivus1.png',
+      foto:      'assets/carros/hilux/hilux 1.jpg',
       valor:     'R$ 00,00',
       button:    'VER'
 
@@ -30,7 +30,7 @@ export class TelaInicialComponent implements OnInit {
     },
     {
       nome:       'Nome do produto',
-      foto:       'assets/carros/hilux/hilux1.jpg',
+      foto:       'assets/carros/nivus/nivus1.png',
       valor:      'R$ 00,00',
       button:     'VER'
     },
