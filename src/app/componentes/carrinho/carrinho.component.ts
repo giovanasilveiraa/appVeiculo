@@ -55,8 +55,8 @@ export class CarrinhoComponent implements OnInit {
       text: "Suas compras estão prontas para serem confirmadas!",
       icon: 'info',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
+      confirmButtonColor: '#274690',
+      cancelButtonColor: '#B80C09',
       confirmButtonText: 'Confirmar!'
     }).then((result) => {
       if (result.isConfirmed) {
