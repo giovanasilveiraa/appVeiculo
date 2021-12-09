@@ -25,33 +25,46 @@ export class CarrinhoComponent implements OnInit {
 
   async formaPagamento() {
 
-    const { value: fruit } = await Swal.fire({
-      title: 'Select field validation',
+    const { value: pagamento } = await Swal.fire({
+      title: 'Selecione a forma de pagamento',
       input: 'select',
       inputOptions: {
-        'Fruits': {
-          apples: 'Apples',
-          bananas: 'Bananas',
-          grapes: 'Grapes',
-          oranges: 'Oranges'
+        'pagamento': {
+          boleto: 'Boleto',
+          CartaoC: 'Cartão de crédito',
+          CartaoD: 'Cartão de débito'
         },
-        'Vegetables': {
-          potato: 'Potato',
-          broccoli: 'Broccoli',
-          carrot: 'Carrot'
-        },
-        'icecream': 'Ice cream'
       },
-      inputPlaceholder: 'Select a fruit',
+      inputPlaceholder: 'Selecione a forma de pagamento',
       showCancelButton: true,
       inputValidator: (value) => {
         return new Promise(void function (resolve) {
-          if (value === 'oranges') {
+          if (value === 'Boleto') {
             resolve();
           } else {
-            resolve('You need to select oranges :)');
+            resolve('Forma de pagamento selecionada :)');
           }
         })
+      }
+    })
+  }
+
+  confirmButton() {
+    Swal.fire({
+      title: 'Deseja confirmar sua compra?',
+      text: "Suas compras estão prontas para serem confirmadas!",
+      icon: 'info',
+      showCancelButton: true,
+      cancelButtonColor: '#274690',
+      confirmButtonColor: '#009A2B',
+      confirmButtonText: 'Confirmar!'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          'Confirmada!',
+          'Sua compra foi efetuada com sucesso.',
+          'success'
+        )
       }
     })
   }
