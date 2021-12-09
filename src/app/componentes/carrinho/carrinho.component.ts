@@ -11,10 +11,10 @@ export class CarrinhoComponent implements OnInit {
   carros = [
 
     {
-      nome:       'Nome do produto',
-      foto:       'assets/carros/hilux/hilux1.jpg',
-      valor:      'R$ 00,00',
-      button:     'Remover'
+      nome: 'Nome do produto',
+      foto: 'assets/carros/hilux/hilux1.jpg',
+      valor: 'R$ 00,00',
+      button: 'Remover'
     }
   ]
 
@@ -23,50 +23,36 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  confirmBox(){
-    Swal.fire({
-      title: 'Forma de pagamento',
-      text: 'Escolha como deseja pagar',
-      icon: 'question',
+  async formaPagamento() {
+
+    const { value: fruit } = await Swal.fire({
+      title: 'Select field validation',
+      input: 'select',
+      inputOptions: {
+        'Fruits': {
+          apples: 'Apples',
+          bananas: 'Bananas',
+          grapes: 'Grapes',
+          oranges: 'Oranges'
+        },
+        'Vegetables': {
+          potato: 'Potato',
+          broccoli: 'Broccoli',
+          carrot: 'Carrot'
+        },
+        'icecream': 'Ice cream'
+      },
+      inputPlaceholder: 'Select a fruit',
       showCancelButton: true,
-      showDenyButton: true,
-      confirmButtonText: 'Boleto',
-      denyButtonText: 'Cartão de crédito',
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire(
-          'Confirmado!',
-          'forma de pagamento selecionada.',
-          'success'
-        )
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire(
-          'Cancelled',
-          'Your imaginary file is safe :)',
-          'error'
-        )
+      inputValidator: (value) => {
+        return new Promise(void function (resolve) {
+          if (value === 'oranges') {
+            resolve();
+          } else {
+            resolve('You need to select oranges :)');
+          }
+        })
       }
     })
   }
-
-  ConfirmButton() {
-    Swal.fire({
-      title: 'Confirmar compra',
-      text: "Suas compras estão prontas para serem confirmadas!",
-      icon: 'info',
-      showCancelButton: true,
-      confirmButtonColor: '#274690',
-      cancelButtonColor: '#B80C09',
-      confirmButtonText: 'Confirmar!'
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire(
-          'Confirmada!',
-          'Parabéns sua compra foi efetuada com sucesso.',
-          'success'
-        )
-      }
-    })
-  }
-
 }
