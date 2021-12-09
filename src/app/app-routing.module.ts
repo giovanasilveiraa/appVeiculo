@@ -3,6 +3,7 @@ import { TelaInicialComponent } from './componentes/tela-inicial/tela-inicial.co
 import { CarrinhoComponent } from './componentes/carrinho/carrinho.component';
 import { FavoritoComponent } from './componentes/favorito/favorito.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { ProdutoComponent } from './componentes/produto/produto.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'carrinho', component: CarrinhoComponent},
   { path:  'favorito', component: FavoritoComponent},
   { path:  'usuario', component: UsuarioComponent},
-  { path:  'login', component: LoginComponent}
+  { path:  'login', component: LoginComponent},
+  { path:  'produto', component: ProdutoComponent}
 ];
 
 @NgModule({

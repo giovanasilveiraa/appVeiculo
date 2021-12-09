@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ControleService } from 'src/app/services/controle/controle.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private servico: ControleService
+  ) { }
 
   ngOnInit(): void {
   }
-
+click(pagina: string){
+this.servico.setPagina(pagina)
+}
 }
