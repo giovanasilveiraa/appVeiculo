@@ -23,29 +23,29 @@ export class CarrinhoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  confirmBox(){
-    Swal.fire({
-      title: 'Are you sure want to remove?',
-      text: 'You will not be able to recover this file!',
-      icon: 'warning',
-      showCancelButton: true,
-      confirmButtonText: 'Yes, delete it!',
-      cancelButtonText: 'No, keep it'
-    }).then((result) => {
-      if (result.value) {
-        Swal.fire(
-          'Deleted!',
-          'Your imaginary file has been deleted.',
-          'success'
-        )
-      } else if (result.dismiss === Swal.DismissReason.cancel) {
-        Swal.fire(
-          'Cancelled',
-          'Your imaginary file is safe :)',
-          'error'
-        )
+  const inputOptions = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({
+        'Boleto': 'Boleto',
+        'Catão de crédito': 'Cartão de crédito',
+        'Cartão de débito': 'Cartão de débito'
+      })
+    }, 1000)
+  })
+
+  const { value: color } = await Swal.fire({
+    title: 'Select a forma de pagamento',
+    input: 'radio',
+    inputOptions: inputOptions,
+    inputValidator: (value) => {
+      if (!value) {
+        return 'You need to choose something!'
       }
-    })
+    }
+  })
+
+  if (color) {
+    Swal.fire({ html: `You selected: ${color}` })
   }
 
 }
